@@ -1,0 +1,1638 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ARABIAN VOYAGE | Luxury Marine & Safari Experiences - دبي وأبوظبي</title>
+
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-dark: #0F0804;
+            --primary-navy: #1A0E07;
+            --secondary-navy: #26140A;
+            --accent-orange: #FF6B00;
+            --orange-gradient: linear-gradient(135deg, #FFA200 0%, #FF5500 100%);
+            --gold-accent: #F4C95D;
+            --gold-gradient: linear-gradient(135deg, #FFE28A 0%, #D49B27 100%);
+            --text-light: #FFFFFF;
+            --text-muted: #F3E5D8;
+            --card-bg: rgba(38, 20, 10, 0.78);
+            --border-glow: rgba(244, 201, 93, 0.28);
+            --whatsapp-green: #25D366;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        /* CUSTOM SCROLLBAR */
+        ::-webkit-scrollbar { width: 7px; }
+        ::-webkit-scrollbar-track { background: var(--bg-dark); }
+        ::-webkit-scrollbar-thumb { background: var(--orange-gradient); border-radius: 10px; }
+
+        /* HEADER & NAVBAR */
+        header {
+            background: rgba(15, 8, 4, 0.94);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            padding: 0.9rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-glow);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            text-decoration: none;
+        }
+
+        .logo-icon-box {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            background: var(--orange-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--gold-accent);
+            box-shadow: 0 4px 15px rgba(255, 107, 0, 0.4);
+            flex-shrink: 0;
+        }
+
+        .logo-icon-box i {
+            font-size: 1.35rem;
+            color: var(--text-light);
+        }
+
+        .logo-text h1 {
+            font-size: 1.25rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+            color: var(--text-light);
+            line-height: 1.1;
+        }
+
+        .logo-text span {
+            font-size: 0.6rem;
+            color: var(--gold-accent);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 700;
+            display: block;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 22px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            right: 0;
+            background: var(--orange-gradient);
+            transition: 0.3s;
+        }
+
+        html[dir="ltr"] .nav-links a::after { right: auto; left: 0; }
+        .nav-links a:hover { color: var(--gold-accent); }
+        .nav-links a:hover::after { width: 100%; }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-book-btn {
+            background: var(--orange-gradient);
+            color: var(--text-light);
+            border: 1px solid var(--gold-accent);
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-weight: 800;
+            font-size: 0.88rem;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 107, 0, 0.35);
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            white-space: nowrap;
+        }
+
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--gold-accent);
+            color: var(--gold-accent);
+            padding: 7px 14px;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+        }
+
+        .lang-btn:hover {
+            background: var(--gold-accent);
+            color: var(--bg-dark);
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid var(--border-glow);
+            color: var(--gold-accent);
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* MOBILE DRAWER MENU */
+        .mobile-drawer {
+            display: none;
+            position: fixed;
+            top: 68px;
+            left: 0;
+            width: 100%;
+            background: rgba(20, 11, 6, 0.98);
+            backdrop-filter: blur(20px);
+            border-bottom: 2px solid var(--gold-accent);
+            z-index: 999;
+            padding: 20px 6%;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+        }
+
+        .mobile-drawer.active {
+            display: block;
+            animation: fadeDown 0.25s ease-out;
+        }
+
+        @keyframes fadeDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .mobile-drawer ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .mobile-drawer ul li a {
+            display: block;
+            padding: 12px 14px;
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 1.05rem;
+            font-weight: 700;
+            border-radius: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .mobile-drawer ul li a:hover {
+            background: rgba(255, 107, 0, 0.16);
+            color: var(--gold-accent);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            min-height: 92vh;
+            background: linear-gradient(180deg, rgba(15, 8, 4, 0.52) 0%, rgba(15, 8, 4, 0.92) 85%, var(--bg-dark) 100%), 
+                        url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 125px 20px 60px 20px;
+        }
+
+        .hero-badge {
+            background: rgba(244, 201, 93, 0.14);
+            backdrop-filter: blur(8px);
+            border: 1px solid var(--gold-accent);
+            color: var(--gold-accent);
+            padding: 7px 22px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 22px;
+        }
+
+        .hero h2 {
+            font-size: 3.3rem;
+            color: var(--text-light);
+            font-weight: 900;
+            margin-bottom: 20px;
+            line-height: 1.25;
+            max-width: 920px;
+        }
+
+        .hero h2 span {
+            background: var(--orange-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            max-width: 820px;
+            margin-bottom: 36px;
+            color: var(--text-muted);
+            line-height: 1.85;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            max-width: 640px;
+        }
+
+        .btn-instant-book {
+            background: var(--orange-gradient);
+            color: var(--text-light);
+            padding: 16px 34px;
+            border-radius: 40px;
+            font-weight: 900;
+            font-size: 1.08rem;
+            border: 2px solid var(--gold-accent);
+            cursor: pointer;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 12px 28px rgba(255, 107, 0, 0.42);
+            transition: 0.3s transform, 0.3s box-shadow;
+        }
+
+        .btn-instant-book:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 16px 34px rgba(255, 107, 0, 0.6);
+        }
+
+        .btn-whatsapp-main {
+            background: var(--whatsapp-green);
+            color: #ffffff;
+            padding: 16px 30px;
+            border-radius: 40px;
+            font-weight: 800;
+            font-size: 1.05rem;
+            text-decoration: none;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+            transition: 0.3s transform;
+        }
+
+        .btn-whatsapp-main:hover { transform: translateY(-3px); }
+
+        /* STATS BAR */
+        .stats-section {
+            background: linear-gradient(90deg, var(--primary-navy) 0%, var(--secondary-navy) 50%, var(--primary-navy) 100%);
+            padding: 38px 5%;
+            border-top: 1px solid var(--border-glow);
+            border-bottom: 1px solid var(--border-glow);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            text-align: center;
+        }
+
+        .stat-item h4 {
+            font-size: 2.5rem;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
+        }
+
+        .stat-item p {
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        /* GENERAL SECTIONS */
+        section {
+            padding: 85px 5%;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h3 {
+            font-size: 2.4rem;
+            color: var(--text-light);
+            font-weight: 900;
+        }
+
+        .section-header h3 span {
+            background: var(--orange-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            margin-top: 12px;
+            font-size: 1.08rem;
+            max-width: 760px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* PACKAGES & FLEET SECTION */
+        .fleet-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+            gap: 28px;
+        }
+
+        .fleet-card {
+            background: var(--secondary-navy);
+            border-radius: 22px;
+            overflow: hidden;
+            border: 1px solid var(--border-glow);
+            transition: 0.35s transform, 0.35s box-shadow, 0.35s border-color;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .fleet-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 36px rgba(255, 107, 0, 0.2);
+            border-color: var(--gold-accent);
+        }
+
+        .fleet-img-wrapper {
+            position: relative;
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .fleet-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s transform;
+        }
+
+        .fleet-card:hover .fleet-img-wrapper img { transform: scale(1.06); }
+
+        .price-badge {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            background: var(--orange-gradient);
+            color: var(--text-light);
+            border: 1px solid var(--gold-accent);
+            padding: 6px 15px;
+            border-radius: 25px;
+            font-weight: 900;
+            font-size: 0.88rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.45);
+        }
+
+        html[dir="ltr"] .price-badge { right: auto; left: 14px; }
+
+        .fleet-content {
+            padding: 24px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .fleet-content h4 {
+            font-size: 1.32rem;
+            color: var(--text-light);
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        .fleet-content p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .card-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-card-book {
+            flex: 2.2;
+            background: var(--orange-gradient);
+            border: 1px solid var(--gold-accent);
+            color: var(--text-light);
+            padding: 13px;
+            border-radius: 13px;
+            font-weight: 800;
+            font-size: 0.98rem;
+            cursor: pointer;
+            transition: 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-card-info {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--gold-accent);
+            color: var(--gold-accent);
+            padding: 13px;
+            border-radius: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn-card-info:hover {
+            background: var(--gold-accent);
+            color: var(--bg-dark);
+        }
+
+        /* VIP REWARDS PROMO BANNER */
+        .vip-banner {
+            background: linear-gradient(135deg, rgba(255, 136, 0, 0.14) 0%, rgba(244, 201, 93, 0.08) 50%, rgba(26, 14, 7, 0.96) 100%);
+            border: 2px solid var(--gold-accent);
+            border-radius: 24px;
+            padding: 42px 28px;
+            text-align: center;
+            box-shadow: 0 0 35px rgba(255, 107, 0, 0.18);
+        }
+
+        .vip-banner h4 {
+            font-size: 2rem;
+            color: var(--gold-accent);
+            margin-bottom: 14px;
+            font-weight: 900;
+        }
+
+        .vip-banner p {
+            font-size: 1.08rem;
+            color: var(--text-light);
+            max-width: 900px;
+            margin: 0 auto 28px auto;
+        }
+
+        .rewards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 18px;
+        }
+
+        .reward-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(244, 201, 93, 0.3);
+            border-radius: 16px;
+            padding: 22px;
+            text-align: right;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        html[dir="ltr"] .reward-card { text-align: left; }
+
+        .reward-card:hover {
+            border-color: var(--gold-accent);
+            transform: translateY(-4px);
+            background: linear-gradient(135deg, rgba(255, 162, 0, 0.2) 0%, rgba(255, 85, 0, 0.12) 100%);
+        }
+
+        .reward-card i {
+            font-size: 1.85rem;
+            color: var(--gold-accent);
+            margin-bottom: 12px;
+        }
+
+        .reward-card h5 {
+            font-size: 1.15rem;
+            color: var(--text-light);
+            margin-bottom: 6px;
+        }
+
+        .reward-card p {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        /* ABOUT SECTION */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+            align-items: center;
+        }
+
+        .about-text h4 {
+            font-size: 2rem;
+            color: var(--gold-accent);
+            margin-bottom: 18px;
+            font-weight: 800;
+        }
+
+        .about-text p {
+            color: var(--text-muted);
+            margin-bottom: 18px;
+            font-size: 1.05rem;
+        }
+
+        .about-image {
+            border-radius: 22px;
+            overflow: hidden;
+            border: 2px solid var(--gold-accent);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 430px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* ROUTES & SERVICES */
+        .routes-grid, .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 26px;
+        }
+
+        .route-card, .service-box {
+            background: var(--card-bg);
+            padding: 30px 24px;
+            border-radius: 20px;
+            border: 1px solid var(--border-glow);
+        }
+
+        .route-card { text-align: right; }
+        html[dir="ltr"] .route-card { text-align: left; }
+
+        .route-card h4 {
+            color: var(--gold-accent);
+            font-size: 1.28rem;
+            margin-bottom: 16px;
+        }
+
+        .route-card ul {
+            list-style: none;
+            color: var(--text-muted);
+            font-size: 0.96rem;
+        }
+
+        .route-card ul li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-right: 22px;
+        }
+
+        html[dir="ltr"] .route-card ul li { padding-right: 0; padding-left: 22px; }
+
+        .route-card ul li::before {
+            content: "⚓";
+            position: absolute;
+            right: 0;
+            color: var(--gold-accent);
+        }
+
+        html[dir="ltr"] .route-card ul li::before { right: auto; left: 0; }
+
+        .service-box {
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .service-box:hover {
+            border-color: var(--gold-accent);
+            transform: translateY(-5px);
+        }
+
+        .service-box i {
+            font-size: 2.5rem;
+            color: var(--gold-accent);
+            margin-bottom: 16px;
+        }
+
+        .service-box h4 {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            margin-bottom: 12px;
+        }
+
+        .service-box p {
+            color: var(--text-muted);
+            font-size: 0.94rem;
+        }
+
+        /* MODALS */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 5, 2, 0.88);
+            backdrop-filter: blur(12px);
+            z-index: 2500;
+            justify-content: center;
+            align-items: center;
+            padding: 16px;
+        }
+
+        .modal-content {
+            background: linear-gradient(160deg, #2B160B 0%, #170B05 100%);
+            border: 2px solid var(--gold-accent);
+            border-radius: 24px;
+            max-width: 620px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 32px 26px;
+            position: relative;
+            color: var(--text-light);
+            text-align: right;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75);
+        }
+
+        html[dir="ltr"] .modal-content { text-align: left; }
+
+        .close-modal {
+            position: absolute;
+            top: 16px;
+            left: 20px;
+            font-size: 2rem;
+            color: var(--text-muted);
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        html[dir="ltr"] .close-modal { left: auto; right: 20px; }
+        .close-modal:hover { color: var(--gold-accent); }
+
+        .booking-header {
+            text-align: center;
+            margin-bottom: 22px;
+            border-bottom: 1px solid var(--border-glow);
+            padding-bottom: 16px;
+        }
+
+        .booking-header h3 {
+            font-size: 1.65rem;
+            color: var(--gold-accent);
+            font-weight: 900;
+        }
+
+        .booking-header p {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            margin-top: 5px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        .form-group { margin-bottom: 14px; }
+        .form-group.full-width { grid-column: 1 / -1; }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 700;
+            font-size: 0.92rem;
+            color: var(--gold-accent);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 13px 15px;
+            border-radius: 12px;
+            border: 1px solid rgba(244, 201, 93, 0.35);
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--text-light);
+            font-size: 1rem;
+            outline: none;
+            min-height: 48px;
+        }
+
+        .form-control:focus {
+            border-color: var(--accent-orange);
+            background: rgba(255, 255, 255, 0.14);
+        }
+
+        .form-control option {
+            background: #1F1008;
+            color: #FFFFFF;
+        }
+
+        .phone-input-wrapper {
+            display: flex;
+            align-items: center;
+            direction: ltr;
+        }
+
+        .phone-prefix {
+            background: rgba(244, 201, 93, 0.2);
+            border: 1px solid rgba(244, 201, 93, 0.35);
+            border-right: none;
+            padding: 0 14px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            border-radius: 12px 0 0 12px;
+            color: var(--gold-accent);
+            font-weight: 800;
+            font-size: 0.98rem;
+        }
+
+        .phone-input-wrapper .form-control { border-radius: 0 12px 12px 0; }
+
+        .price-summary-box {
+            background: rgba(255, 107, 0, 0.16);
+            border: 1px dashed var(--gold-accent);
+            border-radius: 14px;
+            padding: 14px 18px;
+            margin: 8px 0 18px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price-summary-box span {
+            color: var(--text-muted);
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        .price-summary-box strong {
+            font-size: 1.3rem;
+            color: var(--gold-accent);
+            font-weight: 900;
+        }
+
+        .submit-whatsapp-btn {
+            width: 100%;
+            background: var(--whatsapp-green);
+            color: #FFFFFF;
+            border: none;
+            padding: 15px;
+            border-radius: 14px;
+            font-size: 1.1rem;
+            font-weight: 900;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.35);
+            min-height: 52px;
+        }
+
+        /* CONTACT & FOOTER */
+        .contact-section {
+            background: var(--primary-navy);
+            border-top: 1px solid var(--border-glow);
+            text-align: center;
+        }
+
+        footer {
+            background: #080402;
+            padding: 38px 20px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(244, 201, 93, 0.15);
+            line-height: 1.85;
+        }
+
+        .footer-rights {
+            color: var(--gold-accent);
+            font-weight: 700;
+            font-size: 0.98rem;
+        }
+
+        /* DESKTOP FLOATING BUTTON & MOBILE STICKY BAR */
+        .floating-book-btn {
+            position: fixed;
+            bottom: 24px;
+            left: 24px;
+            background: var(--orange-gradient);
+            color: var(--text-light);
+            border: 2px solid var(--gold-accent);
+            padding: 14px 24px;
+            border-radius: 50px;
+            font-weight: 900;
+            font-size: 1rem;
+            cursor: pointer;
+            z-index: 1500;
+            box-shadow: 0 10px 30px rgba(255, 107, 0, 0.55);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        html[dir="ltr"] .floating-book-btn { left: auto; right: 24px; }
+
+        .mobile-bottom-bar {
+            display: none;
+        }
+
+        /* RESPONSIVE MOBILE RULES */
+        @media (max-width: 992px) {
+            .nav-links, .nav-book-btn { display: none; }
+            .mobile-menu-toggle { display: flex; }
+            .about-grid { grid-template-columns: 1fr; }
+            .stats-section { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+            .hero h2 { font-size: 2.3rem; }
+        }
+
+        @media (max-width: 640px) {
+            body { padding-bottom: 76px; }
+            .floating-book-btn { display: none; }
+
+            .mobile-bottom-bar {
+                display: flex;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                background: rgba(18, 9, 4, 0.96);
+                backdrop-filter: blur(16px);
+                border-top: 1px solid var(--gold-accent);
+                padding: 10px 14px;
+                gap: 10px;
+                z-index: 1600;
+                box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.65);
+            }
+
+            .mobile-bar-book {
+                flex: 1.6;
+                background: var(--orange-gradient);
+                color: var(--text-light);
+                border: 1px solid var(--gold-accent);
+                border-radius: 13px;
+                padding: 12px;
+                font-weight: 900;
+                font-size: 0.98rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                cursor: pointer;
+            }
+
+            .mobile-bar-wa {
+                flex: 1;
+                background: var(--whatsapp-green);
+                color: #FFFFFF;
+                border: none;
+                border-radius: 13px;
+                padding: 12px;
+                font-weight: 800;
+                font-size: 0.95rem;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 6px;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 108px 16px 46px 16px;
+            }
+
+            .hero h2 { font-size: 1.9rem; line-height: 1.3; }
+            .hero p { font-size: 1rem; margin-bottom: 26px; }
+
+            .hero-btns { flex-direction: column; gap: 12px; }
+            .btn-instant-book, .btn-whatsapp-main { width: 100%; padding: 15px 22px; font-size: 1rem; }
+
+            section { padding: 60px 4.5%; }
+            .section-header h3 { font-size: 1.85rem; }
+            .stat-item h4 { font-size: 2rem; }
+            .vip-banner { padding: 28px 18px; }
+            .vip-banner h4 { font-size: 1.45rem; }
+            .about-image img { height: 270px; }
+
+            .form-grid { grid-template-columns: 1fr; }
+
+            /* Bottom-Sheet Modal on Mobile */
+            .modal { align-items: flex-end; padding: 0; }
+            .modal-content {
+                border-radius: 24px 24px 0 0;
+                max-height: 92vh;
+                padding: 26px 18px 30px 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <a href="#" class="logo">
+            <div class="logo-icon-box">
+                <i class="fa-solid fa-compass"></i>
+            </div>
+            <div class="logo-text">
+                <h1>ARABIAN VOYAGE</h1>
+                <span>Dubai & Abu Dhabi Luxury</span>
+            </div>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="#packages" data-ar="الباقات والأسعار" data-en="Packages & Fleet">الباقات والأسعار</a></li>
+            <li><a href="#routes" data-ar="مسارات الإبحار" data-en="Routes">مسارات الإبحار</a></li>
+            <li><a href="#rewards" data-ar="قسائم VIP" data-en="VIP Rewards">قسائم VIP</a></li>
+            <li><a href="#about" data-ar="من نحن" data-en="About Us">من نحن</a></li>
+            <li><a href="#services" data-ar="خدماتنا" data-en="Services">خدماتنا</a></li>
+        </ul>
+
+        <div class="header-actions">
+            <button class="nav-book-btn" onclick="openBookingModal()">
+                <i class="fa-solid fa-calendar-check"></i>
+                <span data-ar="احجز الآن" data-en="Book Now">احجز الآن</span>
+            </button>
+            <button class="lang-btn" onclick="toggleLanguage()">
+                <i class="fa-solid fa-globe"></i> <span id="lang-label">English</span>
+            </button>
+            <button class="mobile-menu-toggle" onclick="toggleMobileDrawer()" aria-label="Menu">
+                <i class="fa-solid fa-bars" id="drawerIcon"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- MOBILE DRAWER MENU -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <ul>
+            <li><a href="#packages" onclick="closeMobileDrawer()" data-ar="🛥️ الباقات والأسعار" data-en="🛥️ Packages & Fleet">🛥️ الباقات والأسعار</a></li>
+            <li><a href="#routes" onclick="closeMobileDrawer()" data-ar="🧭 مسارات الإبحار" data-en="🧭 Cruising Routes">🧭 مسارات الإبحار</a></li>
+            <li><a href="#rewards" onclick="closeMobileDrawer()" data-ar="🎁 قسائم هدايا VIP" data-en="🎁 VIP Vouchers">🎁 قسائم هدايا VIP</a></li>
+            <li><a href="#about" onclick="closeMobileDrawer()" data-ar="✨ من نحن" data-en="✨ About Us">✨ من نحن</a></li>
+            <li><a href="#services" onclick="closeMobileDrawer()" data-ar="🎉 خدمات المناسبات" data-en="🎉 Event Services">🎉 خدمات المناسبات</a></li>
+            <li><a href="#contact" onclick="closeMobileDrawer()" data-ar="📞 تواصل معنا" data-en="📞 Contact Us">📞 تواصل معنا</a></li>
+        </ul>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-badge" data-ar="⚓ التجارب البحرية والسياحية الأرقى في دبي وأبوظبي" data-en="⚓ Premier Luxury Marine & Safari Experiences in UAE">⚓ التجارب البحرية والسياحية الأرقى في دبي وأبوظبي</div>
+        <h2 data-ar="استكشف سحر الإمارات <span>بفخامة ملكية لا تُضاهى</span>" data-en="Experience The UAE <span>With Unmatched Royal Luxury</span>">استكشف سحر الإمارات <span>بفخامة ملكية لا تُضاهى</span></h2>
+        <p data-ar="تقدم شركة ARABIAN VOYAGE أرقى الرحلات البحرية على متن المراكب الخشبية التراثية، يخوت الكتمران VIP، اليخوت الخاصة، بالإضافة إلى مغامرات سفاري دبي وأبوظبي بأفضل الأسعار الحصرية."
+           data-en="ARABIAN VOYAGE offers premier sea cruises aboard traditional wooden dhows, VIP catamarans, private superyachts, alongside Dubai & Abu Dhabi desert safaris at exclusive rates.">
+           تقدم شركة ARABIAN VOYAGE أرقى الرحلات البحرية على متن المراكب الخشبية التراثية، يخوت الكتمران VIP، اليخوت الخاصة، بالإضافة إلى مغامرات سفاري دبي وأبوظبي بأفضل الأسعار الحصرية.
+        </p>
+        <div class="hero-btns">
+            <button class="btn-instant-book" onclick="openBookingModal()">
+                <i class="fa-solid fa-pen-to-square"></i>
+                <span data-ar="تعبئة بيانات الحجز الفوري" data-en="Instant Booking Form">تعبئة بيانات الحجز الفوري</span>
+            </button>
+            <a href="https://wa.me/971569712753691" class="btn-whatsapp-main" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span data-ar="تواصل مباشر عبر الواتساب" data-en="Direct WhatsApp Chat">تواصل مباشر عبر الواتساب</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- STATS BAR -->
+    <div class="stats-section">
+        <div class="stat-item">
+            <h4>2022</h4>
+            <p data-ar="سنة التأسيس في أبوظبي" data-en="Founded in Abu Dhabi">سنة التأسيس في أبوظبي</p>
+        </div>
+        <div class="stat-item">
+            <h4>500</h4>
+            <p data-ar="أقصى سعة للمركب الواحدة" data-en="Max Single Vessel Capacity">أقصى سعة للمركب الواحدة</p>
+        </div>
+        <div class="stat-item">
+            <h4>100%</h4>
+            <p data-ar="تغطية دبي وأبوظبي" data-en="Dubai & Abu Dhabi Coverage">تغطية دبي وأبوظبي</p>
+        </div>
+        <div class="stat-item">
+            <h4>99.8%</h4>
+            <p data-ar="رضا كبار العملاء" data-en="VIP Client Satisfaction">رضا كبار العملاء</p>
+        </div>
+    </div>
+
+    <!-- PACKAGES & FLEET SECTION -->
+    <section id="packages">
+        <div class="section-header">
+            <h3 data-ar="باقاتنا <span>البحرية والسياحية</span>" data-en="Our Marine & <span>Safari Packages</span>">باقاتنا <span>البحرية والسياحية</span></h3>
+            <p data-ar="اختر تجربتك المفضلة وقم بتعبئة بياناتك للحجز الفوري عبر الواتساب" data-en="Choose your preferred experience and fill in your details for instant WhatsApp booking">اختر تجربتك المفضلة وقم بتعبئة بياناتك للحجز الفوري عبر الواتساب</p>
+        </div>
+
+        <div class="fleet-grid">
+            <!-- 1. مركب خشبي 29 درهم -->
+            <div class="fleet-card">
+                <div class="fleet-img-wrapper">
+                    <span class="price-badge" data-ar="29 درهم / للبالغ" data-en="29 AED / Adult">29 درهم / للبالغ</span>
+                    <img src="https://whitesky.travel/wp-content/uploads/2025/07/dhow-cruise-in-marina-dubai-pay-with-tabby-or-tamara.webp" alt="Traditional Wooden Dhow">
+                </div>
+                <div class="fleet-content">
+                    <div>
+                        <h4 data-ar="مركب خشبي تراثي" data-en="Traditional Wooden Dhow">مركب خشبي تراثي</h4>
+                        <p data-ar="جولة بحرية ساحرة لمدة ساعتين مع إطلالات خلابة، جلسات مكيفة ومفتوحة، وعروض ترفيهية وموسيقى هادئة بسعر اقتصادي مذهل." data-en="Charming 2-hour cruise with scenic views, air-conditioned & open decks, and live entertainment at an unbeatable rate.">جولة بحرية ساحرة لمدة ساعتين مع إطلالات خلابة، جلسات مكيفة ومفتوحة، وعروض ترفيهية وموسيقى هادئة بسعر اقتصادي مذهل.</p>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-card-book" onclick="openBookingModal('مركب خشبي (29 درهم للبالغ)')">
+                            <i class="fa-solid fa-check-circle"></i> <span data-ar="احجز الآن" data-en="Book Now">احجز الآن</span>
+                        </button>
+                        <button class="btn-card-info" 
+                                data-modal-ar="🔹 تفاصيل المركب الخشبي التراثي (29 درهم للبالغ):\n\n• المدة: ساعتان من الإبحار الممتع.\n• الأوقات المتاحة: 5:00 - 7:00 مساءً | 7:00 - 9:00 مساءً | 9:00 - 11:00 مساءً.\n• المميزات: طابق علوي مكشوف وطابق سفلي مكيف، موسيقى وعروض ترفيهية." 
+                                data-modal-en="🔹 Traditional Wooden Dhow (29 AED/Adult):\n\n• Duration: 2 Hours cruise.\n• Available Timings: 5-7 PM | 7-9 PM | 9-11 PM.\n• Features: Open upper deck, air-conditioned lower deck, ambient music & entertainment." 
+                                onclick="openModalFromElem(this)">
+                            <i class="fa-solid fa-circle-info"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. مركب خشبي متطور 45 درهم -->
+            <div class="fleet-card">
+                <div class="fleet-img-wrapper">
+                    <span class="price-badge" data-ar="45 درهم / للشخص" data-en="45 AED / Person">45 درهم / للشخص</span>
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=1000&auto=format&fit=crop" alt="Upgraded Wooden Dhow">
+                </div>
+                <div class="fleet-content">
+                    <div>
+                        <h4 data-ar="مركب خشبي متطور (بوفيه وعروض)" data-en="Upgraded Luxury Wooden Dhow">مركب خشبي متطور (بوفيه وعروض)</h4>
+                        <p data-ar="تجربة راقية على متن مركب خشبي حديث يشمل بوفيه عشاء متنوع، مشروبات ضيافة، وعروض حية وسط أضواء دبي الساحرة." data-en="Elevated experience aboard an upgraded wooden dhow featuring a rich dinner buffet, welcome drinks, and live shows.">تجربة راقية على متن مركب خشبي حديث يشمل بوفيه عشاء متنوع، مشروبات ضيافة، وعروض حية وسط أضواء دبي الساحرة.</p>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-card-book" onclick="openBookingModal('مركب خشبي متطور (45 درهم للشخص)')">
+                            <i class="fa-solid fa-check-circle"></i> <span data-ar="احجز الآن" data-en="Book Now">احجز الآن</span>
+                        </button>
+                        <button class="btn-card-info" 
+                                data-modal-ar="🔹 تفاصيل المركب الخشبي المتطور (45 درهم للشخص):\n\n• المدة: ساعتان كاملتان.\n• الأوقات المتاحة: 5:00 - 7:00 مساءً | 7:00 - 9:00 مساءً | 9:00 - 11:00 مساءً.\n• يشمل: بوفيه عشاء عالمي فاخر، عصائر ومياه، عروض تنورة وموسيقى." 
+                                data-modal-en="🔹 Upgraded Wooden Dhow (45 AED/Person):\n\n• Duration: 2 Full Hours.\n• Available Timings: 5-7 PM | 7-9 PM | 9-11 PM.\n• Includes: International dinner buffet, juices & water, live Tanoura show & music." 
+                                onclick="openModalFromElem(this)">
+                            <i class="fa-solid fa-circle-info"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. يخت كتمران VIP 75 درهم -->
+            <div class="fleet-card">
+                <div class="fleet-img-wrapper">
+                    <span class="price-badge" data-ar="75 درهم / للشخص" data-en="75 AED / Person">75 درهم / للشخص</span>
+                    <img src="https://boatanza.com/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-05-at-3.58.51-PM-3.jpeg" alt="VIP Catamaran Yacht">
+                </div>
+                <div class="fleet-content">
+                    <div>
+                        <h4 data-ar="يخت كتمران VIP الفاخر" data-en="VIP Mega Catamaran Yacht">يخت كتمران VIP الفاخر</h4>
+                        <p data-ar="قمة الرفاهية والثبات في البحر على متن يخت كتمران حديث بتصميم بانورامي، جلسات VIP فاخرة، وبوفيه عشاء راقٍ وإطلالات 360 درجة." data-en="Peak luxury and stability aboard a modern panoramic catamaran with VIP lounges, upscale dinner buffet, and 360° views.">قمة الرفاهية والثبات في البحر على متن يخت كتمران حديث بتصميم بانورامي، جلسات VIP فاخرة، وبوفيه عشاء راقٍ وإطلالات 360 درجة.</p>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-card-book" onclick="openBookingModal('يخت كتمران VIP (75 درهم للشخص)')">
+                            <i class="fa-solid fa-check-circle"></i> <span data-ar="احجز الآن" data-en="Book Now">احجز الآن</span>
+                        </button>
+                        <button class="btn-card-info" 
+                                data-modal-ar="🔹 تفاصيل يخت كتمران VIP (75 درهم للشخص):\n\n• المدة: ساعتان من الفخامة المطلقة.\n• المميزات: ثبات فائق دون اهتزاز، جلسات لاونج عصرية، بوفيه 5 نجوم، وتصوير استثنائي أمام معالم دبي." 
+                                data-modal-en="🔹 VIP Catamaran Yacht (75 AED/Person):\n\n• Duration: 2 Hours of pure luxury.\n• Features: Ultra-smooth sailing, modern lounge seating, 5-star buffet, and iconic photo stops." 
+                                onclick="openModalFromElem(this)">
+                            <i class="fa-solid fa-circle-info"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. يخت خاص VIP -->
+            <div class="fleet-card">
+                <div class="fleet-img-wrapper">
+                    <span class="price-badge" data-ar="تأجير خاص VIP" data-en="Private VIP Charter">تأجير خاص VIP</span>
+                    <img src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?q=80&w=1000&auto=format&fit=crop" alt="Private Luxury Yacht">
+                </div>
+                <div class="fleet-content">
+                    <div>
+                        <h4 data-ar="يخت خاص (عائلي / حفلات VIP)" data-en="Private Yacht (Family / VIP Events)">يخت خاص (عائلي / حفلات VIP)</h4>
+                        <p data-ar="يخوت خاصة من 44 قدم إلى 90 قدم بخصوصية تامة مع كابتن وطاقم ضيافة، غرف نوم مكيفة، ونظام صوتي متكامل للمناسبات الخاصة." data-en="Private yachts from 44ft to 90ft offering complete privacy, captain & crew, AC cabins, and premium sound systems.">يخوت خاصة من 44 قدم إلى 90 قدم بخصوصية تامة مع كابتن وطاقم ضيافة، غرف نوم مكيفة، ونظام صوتي متكامل للمناسبات الخاصة.</p>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-card-book" onclick="openBookingModal('يخت خاص')">
+                            <i class="fa-solid fa-check-circle"></i> <span data-ar="احجز الآن" data-en="Book Now">احجز الآن</span>
+                        </button>
+                        <button class="btn-card-info" 
+                                data-modal-ar="🔹 تفاصيل اليخت الخاص:\n\n• السعة: من 2 حتى 34 شخصاً حسب حجم اليخت.\n• يشمل: كابتن وطاقم، مياه وثلج ومشروبات غازية، إمكانية إضافة باربكيو وتزيين أعياد ميلاد." 
+                                data-modal-en="🔹 Private Yacht Details:\n\n• Capacity: 2 to 34 guests.\n• Includes: Captain & crew, water, ice & soft drinks, optional live BBQ & birthday decor." 
+                                onclick="openModalFromElem(this)">
+                            <i class="fa-solid fa-circle-info"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. سفاري دبي -->
+            <div class="fleet-card">
+                <div class="fleet-img-wrapper">
+                    <span class="price-badge" data-ar="مغامرة الصحراء" data-en="Desert Adventure">مغامرة الصحراء</span>
+                    <img src="https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?q=80&w=1000&auto=format&fit=crop" alt="Dubai Desert Safari">
+                </div>
+                <div class="fleet-content">
+                    <div>
+                        <h4 data-ar="سفاري دبي الصحراوي VIP" data-en="Dubai VIP Desert Safari">سفاري دبي الصحراوي VIP</h4>
+                        <p data-ar="تطعيس بسيارات الدفع الرباعي 4x4، ركوب الجمال، التزلج على الرمال، مخيم بدوي فاخر مع بوفيه مشاوي وعروض نارية وتنورة." data-en="4x4 dune bashing, camel riding, sandboarding, luxury Bedouin camp with BBQ buffet, fire & Tanoura shows.">تطعيس بسيارات الدفع الرباعي 4x4، ركوب الجمال، التزلج على الرمال، مخيم بدوي فاخر مع بوفيه مشاوي وعروض نارية وتنورة.</p>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-card-book" onclick="openBookingModal('سفاري دبي')">
+                            <i class="fa-solid fa-check-circle"></i> <span data-ar="احجز الآن" data-en="Book Now">احجز الآن</span>
+                        </button>
+                        <button class="btn-card-info" 
+                                data-modal-ar="🔹 تفاصيل سفاري دبي:\n\n• توصيل من وإلى المنزل أو الفندق بسيارات 4x4 حديثة.\n• مغامرة الكثبان الرملية، تصوير الغروب، عشاء باربكيو مفتوح وعروض حية." 
+                                data-modal-en="🔹 Dubai Desert Safari Details:\n\n• Pick-up & drop-off in modern 4x4 vehicles.\n• Dune bashing, sunset photography, open BBQ dinner & live shows." 
+                                onclick="openModalFromElem(this)">
+                            <i class="fa-solid fa-circle-info"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. سفاري أبوظبي -->
+            <div class="fleet-card">
+                <div class="fleet-img-wrapper">
+                    <span class="price-badge" data-ar="أبوظبي الملكية" data-en="Royal Abu Dhabi">أبوظبي الملكية</span>
+                    <img src="https://images.unsplash.com/photo-1547234935-80c7145ec969?q=80&w=1000&auto=format&fit=crop" alt="Abu Dhabi Desert Safari">
+                </div>
+                <div class="fleet-content">
+                    <div>
+                        <h4 data-ar="سفاري أبوظبي الصحراوي" data-en="Abu Dhabi Desert Safari">سفاري أبوظبي الصحراوي</h4>
+                        <p data-ar="استكشف الكثبان الذهبية الشاهقة في صحراء أبوظبي مع تجربة ضيافة إماراتية أصيلة، عشاء تحت النجوم، وأنشطة صحراوية متكاملة." data-en="Explore the towering golden dunes of Abu Dhabi with authentic Emirati hospitality, dinner under the stars, and desert activities.">استكشف الكثبان الذهبية الشاهقة في صحراء أبوظبي مع تجربة ضيافة إماراتية أصيلة، عشاء تحت النجوم، وأنشطة صحراوية متكاملة.</p>
+                    </div>
+                    <div class="card-actions">
+                        <button class="btn-card-book" onclick="openBookingModal('سفاري أبوظبي')">
+                            <i class="fa-solid fa-check-circle"></i> <span data-ar="احجز الآن" data-en="Book Now">احجز الآن</span>
+                        </button>
+                        <button class="btn-card-info" 
+                                data-modal-ar="🔹 تفاصيل سفاري أبوظبي:\n\n• جولة صحراوية متكاملة في صحراء أبوظبي الساحرة.\n• تشمل التوصيل، التطعيس، الضيافة العربية، وبوفيه عشاء فاخر." 
+                                data-modal-en="🔹 Abu Dhabi Desert Safari Details:\n\n• Complete desert expedition in Abu Dhabi.\n• Includes transfers, dune bashing, Arabic hospitality, and luxury dinner buffet." 
+                                onclick="openModalFromElem(this)">
+                            <i class="fa-solid fa-circle-info"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIP REWARDS BANNER -->
+    <section id="rewards" style="padding-top: 10px;">
+        <div class="vip-banner">
+            <h4 data-ar="🎁 احجز معنا واحصل على فرصة الفوز بقسائم هدايا لتجارب دبي الملكية!" data-en="🎁 Book With Us & Win VIP Vouchers For Dubai’s Top Attractions!">🎁 احجز معنا واحصل على فرصة الفوز بقسائم هدايا لتجارب دبي الملكية!</h4>
+            <p data-ar="عند تأكيد حجزك مع ARABIAN VOYAGE، ستدخل تلقائياً في السحب الدوري للحصول على قسائم هدايا مجانية وشاملة لتقضية أوقات لا تُنسى في أرقى وجهات دبي السياحية والفندقية:"
+               data-en="Upon confirming your reservation with ARABIAN VOYAGE, you are automatically entered into our draw for complimentary luxury vouchers across Dubai:">
+               عند تأكيد حجزك مع ARABIAN VOYAGE، ستدخل تلقائياً في السحب الدوري للحصول على قسائم هدايا مجانية وشاملة لتقضية أوقات لا تُنسى في أرقى وجهات دبي السياحية والفندقية:
+            </p>
+
+            <div class="rewards-grid">
+                <div class="reward-card" data-modal-ar="تفاصيل القسيمة 1: إقامة فاخرة شاملة لـ 3 ليالي لشخصين في فندق Palazzo Versace أو Address Downtown دبي مع وجبة إفطار ملكية واستخدام كافة المرافق والصالونات التجميلية." data-modal-en="Voucher 1 Details: Luxury 3-night stay for two at Palazzo Versace or Address Downtown Dubai including royal breakfast and full spa & facility access." onclick="openModalFromElem(this)">
+                    <i class="fa-solid fa-hotel"></i>
+                    <h5 data-ar="إقامة 3 ليالي فندقية" data-en="3-Night Luxury Stay">إقامة 3 ليالي فندقية</h5>
+                    <p data-ar="في Palazzo Versace أو Address Downtown" data-en="At Palazzo Versace or Address Downtown">في Palazzo Versace أو Address Downtown</p>
+                </div>
+
+                <div class="reward-card" data-modal-ar="تفاصيل القسيمة 2: رحلة طيران سياحية بالطائرة المروحية (Helicopter) لمدة 22 دقيقة تجوب فيها أجواء دبي فوق برج خليفة، برج العرب، ونخلة جميرا." data-modal-en="Voucher 2 Details: 22-minute helicopter sightseeing tour over Dubai skyline, Burj Khalifa, Burj Al Arab, and Palm Jumeirah." onclick="openModalFromElem(this)">
+                    <i class="fa-solid fa-helicopter"></i>
+                    <h5 data-ar="جولة طائرة هليكوبتر" data-en="Helicopter Aerial Tour">جولة طائرة هليكوبتر</h5>
+                    <p data-ar="تحليق ساحر فوق أفق دبي وبرج العرب" data-en="Panoramic flyover above Dubai skyline">تحليق ساحر فوق أفق دبي وبرج العرب</p>
+                </div>
+
+                <div class="reward-card" data-modal-ar="تفاصيل القسيمة 3: تذاكر VIP خاصة للركوب في العجلة الدوارة الأكبر عالمياً (Ain Dubai) في عين دبي بدبي مارينا مع مقصورة خاصة ومشروبات ضيافة." data-modal-en="Voucher 3 Details: VIP pass for Ain Dubai, the world's largest observation wheel at Bluewaters, with private cabin and complimentary drinks." onclick="openModalFromElem(this)">
+                    <i class="fa-solid fa-ferris-wheel"></i>
+                    <h5 data-ar="تذاكر عين دبي VIP" data-en="Ain Dubai VIP Pass">تذاكر عين دبي VIP</h5>
+                    <p data-ar="إطلالة بانورامية كاملة من جزيرة بلوواترز" data-en="Exclusive private cabin views at Bluewaters">إطلالة بانورامية كاملة من جزيرة بلوواترز</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROUTES SECTION -->
+    <section id="routes" style="background:var(--primary-navy);">
+        <div class="section-header">
+            <h3 data-ar="مسارات <span>الإبحار المتاحة</span>" data-en="Cruising <span>Routes</span>">مسارات <span>الإبحار المتاحة</span></h3>
+            <p data-ar="نأخذك في جولات بحرية تشمل أشهر وأرقى المعالم المعمارية والسياحية في إمارة دبي" data-en="Cruising along Dubai’s most prestigious architectural and coastal landmarks">نأخذك في جولات بحرية تشمل أشهر وأرقى المعالم المعمارية والسياحية في إمارة دبي</p>
+        </div>
+
+        <div class="routes-grid">
+            <div class="route-card">
+                <h4 data-ar="🚢 مسار دبي مارينا وبلوواترز" data-en="🚢 Dubai Marina & Bluewaters">🚢 مسار دبي مارينا وبلوواترز</h4>
+                <ul>
+                    <li data-ar="الانطلاق من أرصفة دبي مارينا الشهيرة" data-en="Departure from Dubai Marina dock">الانطلاق من أرصفة دبي مارينا الشهيرة</li>
+                    <li data-ar="المرور بكتلة الأبراج الشاهقة وإضاءات مارينا" data-en="Cruising past Marina skyscrapers">المرور بكتلة الأبراج الشاهقة وإضاءات مارينا</li>
+                    <li data-ar="التوقف أمام عجلة عين دبي (Ain Dubai) للتصوير" data-en="Photo stop at Ain Dubai">التوقف أمام عجلة عين دبي (Ain Dubai) للتصوير</li>
+                    <li data-ar="الإبحار بالقرب من شاطئ JBR" data-en="Sailing past JBR Beach">الإبحار بالقرب من شاطئ JBR</li>
+                </ul>
+            </div>
+
+            <div class="route-card">
+                <h4 data-ar="🏰 مسار النخلة وبرج العرب" data-en="🏰 Palm Jumeirah & Burj Al Arab">🏰 مسار النخلة وبرج العرب</h4>
+                <ul>
+                    <li data-ar="جولة حول مجسم جزيرة نخلة جميرا" data-en="Cruising around Palm Jumeirah">جولة حول مجسم جزيرة نخلة جميرا</li>
+                    <li data-ar="التقاط صور خلفية لمنتجع أتلانتس النخلة" data-en="Photoshoot at Atlantis The Palm">التقاط صور خلفية لمنتجع أتلانتس النخلة</li>
+                    <li data-ar="الوقوف أمام فندق برج العرب 7 نجوم" data-en="Anchor near Burj Al Arab">الوقوف أمام فندق برج العرب 7 نجوم</li>
+                    <li data-ar="فرصة للسباحة والاسترخاء في مياه جميرا الهادئة" data-en="Swimming stop in clear waters">فرصة للسباحة والاسترخاء في مياه جميرا الهادئة</li>
+                </ul>
+            </div>
+
+            <div class="route-card">
+                <h4 data-ar="🏙️ مسار القناة المائية وداون تاون" data-en="🏙️ Water Canal & Downtown">🏙️ مسار القناة المائية وداون تاون</h4>
+                <ul>
+                    <li data-ar="عبور القناة المائية وشلالات دبي المضاءة" data-en="Sailing through Dubai Water Canal">عبور القناة المائية وشلالات دبي المضاءة</li>
+                    <li data-ar="إطلالة على أفق برج خليفة ووسط المدينة" data-en="Views of Burj Khalifa skyline">إطلالة على أفق برج خليفة ووسط المدينة</li>
+                    <li data-ar="المرور تحت جسور القناة المعمارية الحديثة" data-en="Passing modern architectural bridges">المرور تحت جسور القناة المعمارية الحديثة</li>
+                    <li data-ar="تجربة إبحار هادئة ومثالية للرحلات الرومانسية" data-en="Serene cruising ideal for couples">تجربة إبحار هادئة ومثالية للرحلات الرومانسية</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <div class="about-grid">
+            <div class="about-text">
+                <h4 data-ar="قصة شغف بالبحر والريادة العالمية" data-en="Our Legacy of Marine Excellence">قصة شغف بالبحر والريادة العالمية</h4>
+                <p data-ar="تأسست شركة <strong>ARABIAN VOYAGE</strong> (اختصاراً لـ <strong>Nautical Universal Routes</strong>) في عام 2022 في العاصمة أبوظبي بدولة الإمارات العربية المتحدة، بتأسيس ورؤية من <strong>الآنسة لادا (Ms. Lada)</strong> وبإشراف وإدارة تنفيذية احترافية من <strong>المستر نور (Mr. Nour)</strong>."
+                   data-en="Founded in 2022 in Abu Dhabi, UAE by Ms. Lada and managed by Mr. Nour, ARABIAN VOYAGE sets global benchmarks in high-end marine & desert experiences.">
+                   تأسست شركة <strong>ARABIAN VOYAGE</strong> (اختصاراً لـ <strong>Nautical Universal Routes</strong>) في عام 2022 في العاصمة أبوظبي بدولة الإمارات العربية المتحدة، بتأسيس ورؤية من <strong>الآنسة لادا (Ms. Lada)</strong> وبإشراف وإدارة تنفيذية احترافية من <strong>المستر نور (Mr. Nour)</strong>.
+                </p>
+                <p data-ar="نحن متخصصون في تنظيم وإدارة كافة الرحلات البحرية والأنشطة السياحية المائية ورحلات السفاري داخل إمارة دبي وأبوظبي. نصمم ذكريات استثنائية تشمل الضيافة الملكية، المأكولات الفاخرة، والتنظيم الاحترافي لكافة المناسبات."
+                   data-en="We specialize in managing sea cruises, water activities, and desert safaris in Dubai and Abu Dhabi, crafting unforgettable memories with royal hospitality and fine dining.">
+                   نحن متخصصون في تنظيم وإدارة كافة الرحلات البحرية والأنشطة السياحية المائية ورحلات السفاري داخل إمارة دبي وأبوظبي. نصمم ذكريات استثنائية تشمل الضيافة الملكية، المأكولات الفاخرة، والتنظيم الاحترافي لكافة المناسبات.
+                </p>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?q=80&w=1000&auto=format&fit=crop" alt="Luxury Superyacht Experience in Dubai">
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" style="background:var(--primary-navy);">
+        <div class="section-header">
+            <h3 data-ar="خدماتنا <span>التنظيمية والترفيهية</span>" data-en="Our <span>Catering & Event Services</span>">خدماتنا <span>التنظيمية والترفيهية</span></h3>
+            <p data-ar="نوفر لك كافة المتطلبات لتصبح رحلتك البحرية احتفالاً كاملاً متكاملاً" data-en="Providing everything required to make your trip an unforgettable celebration">نوفر لك كافة المتطلبات لتصبح رحلتك البحرية احتفالاً كاملاً متكاملاً</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-box">
+                <i class="fa-solid fa-cake-candles"></i>
+                <h4 data-ar="أعياد الميلاد والمناسبات الخاصة" data-en="Birthdays & Celebrations">أعياد الميلاد والمناسبات الخاصة</h4>
+                <p data-ar="تزيين كامل بالبالونات، تأمين كيك ميلاد مخصص، تشغيل أنظمة الإضاءة والموسيقى، وتوفير مصور احترافي." data-en="Full balloon decor, custom birthday cakes, sound systems, and dedicated photography.">تزيين كامل بالبالونات، تأمين كيك ميلاد مخصص، تشغيل أنظمة الإضاءة والموسيقى، وتوفير مصور احترافي.</p>
+            </div>
+
+            <div class="service-box">
+                <i class="fa-solid fa-ring"></i>
+                <h4 data-ar="حفلات الزفاف والخطوبة" data-en="Weddings & Proposals">حفلات الزفاف والخطوبة</h4>
+                <p data-ar="تنسيق راقٍ لطلبات الزواج المفاجئة وحفلات الزفاف على سطح اليخوت والكتمران مع سجادة حمراء وضيافة ملكية." data-en="Elegant proposal set-ups and wedding receptions with red carpet and gourmet catering.">تنسيق راقٍ لطلبات الزواج المفاجئة وحفلات الزفاف على سطح اليخوت والكتمران مع سجادة حمراء وضيافة ملكية.</p>
+            </div>
+
+            <div class="service-box">
+                <i class="fa-solid fa-utensils"></i>
+                <h4 data-ar="بوفيهات العشاء والباربكيو Live" data-en="Gourmet Catering & BBQ">بوفيهات العشاء والباربكيو Live</h4>
+                <p data-ar="طهاة متمرسون لإعداد المشاوي الطازجة مباشرة على متن اليخت أو تقديم بوفيهات عشاء مفتوحة متنوعة." data-en="Live BBQ chefs onboard preparing fresh grills or serving luxury international buffets.">طهاة متمرسون لإعداد المشاوي الطازجة مباشرة على متن اليخت أو تقديم بوفيهات عشاء مفتوحة متنوعة.</p>
+            </div>
+
+            <div class="service-box">
+                <i class="fa-solid fa-water"></i>
+                <h4 data-ar="الألعاب المائية والJet Ski" data-en="Water Sports & Jet Skis">الألعاب المائية والJet Ski</h4>
+                <p data-ar="إضافة دراجات جت سكي سريعة، ألعاب مائية، أو تجربة Flyboard للتسلية والتشويق أثناء توقف اليخت." data-en="Add jet skis, water toys, or flyboards for thrilling water activities during anchors.">إضافة دراجات جت سكي سريعة، ألعاب مائية، أو تجربة Flyboard للتسلية والتشويق أثناء توقف اليخت.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section" id="contact">
+        <div class="section-header">
+            <h3 data-ar="احجز رحلتك <span>الآن واستفد من العروض</span>" data-en="Book Your <span>Cruise Today</span>">احجز رحلتك <span>الآن واستفد من العروض</span></h3>
+            <p data-ar="قم بتعبئة نموذج الحجز الفوري أو تواصل معنا مباشرة على مدار 24 ساعة" data-en="Fill out our instant booking form or contact us directly 24/7">قم بتعبئة نموذج الحجز الفوري أو تواصل معنا مباشرة على مدار 24 ساعة</p>
+        </div>
+
+        <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap; margin-top:20px;">
+            <button class="btn-instant-book" onclick="openBookingModal()">
+                <i class="fa-solid fa-calendar-check"></i>
+                <span data-ar="نموذج الحجز الفوري (إرسال للواتساب)" data-en="Instant Booking Form (Send to WhatsApp)">نموذج الحجز الفوري (إرسال للواتساب)</span>
+            </button>
+            <a href="tel:0554406511" class="btn-whatsapp-main" style="background:var(--secondary-navy); border:1px solid var(--gold-accent);">
+                <i class="fa-solid fa-phone"></i> 
+                <span data-ar="الاتصال المباشر: 055 440 6511" data-en="Direct Call: 055 440 6511">الاتصال المباشر: 055 440 6511</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- DESKTOP FLOATING BUTTON -->
+    <button class="floating-book-btn" onclick="openBookingModal()">
+        <i class="fa-brands fa-whatsapp" style="font-size: 1.3rem;"></i>
+        <span data-ar="احجز رحلتك الآن" data-en="Book Your Trip">احجز رحلتك الآن</span>
+    </button>
+
+    <!-- MOBILE STICKY BOTTOM BAR -->
+    <div class="mobile-bottom-bar">
+        <button class="mobile-bar-book" onclick="openBookingModal()">
+            <i class="fa-solid fa-calendar-check"></i>
+            <span data-ar="احجز الآن" data-en="Book Now">احجز الآن</span>
+        </button>
+        <a href="https://wa.me/971569712753691" class="mobile-bar-wa" target="_blank">
+            <i class="fa-brands fa-whatsapp" style="font-size: 1.15rem;"></i>
+            <span data-ar="واتساب" data-en="WhatsApp">واتساب</span>
+        </a>
+    </div>
+
+    <!-- INSTANT BOOKING MODAL -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeBookingModal()">&times;</span>
+            <div class="booking-header">
+                <h3 data-ar="⚓ نموذج الحجز الفوري" data-en="⚓ Instant Reservation Form">⚓ نموذج الحجز الفوري</h3>
+                <p data-ar="أدخل بياناتك أدناه وسيتم إرسال طلبك مباشرة إلى فريق الحجوزات عبر الواتساب" data-en="Fill in your details below to send your reservation directly via WhatsApp">أدخل بياناتك أدناه وسيتم إرسال طلبك مباشرة إلى فريق الحجوزات عبر الواتساب</p>
+            </div>
+
+            <form id="bookingForm" onsubmit="sendBookingToWhatsApp(event)">
+                <div class="form-grid">
+                    <!-- الاسم الكامل -->
+                    <div class="form-group full-width">
+                        <label for="clientName" data-ar="الاسم الكامل *" data-en="Full Name *">الاسم الكامل *</label>
+                        <input type="text" id="clientName" class="form-control" required placeholder="أدخل اسمك الكريم / Enter your full name">
+                    </div>
+
+                    <!-- رقم الهاتف الإماراتي -->
+                    <div class="form-group full-width">
+                        <label for="clientPhone" data-ar="رقم الهاتف الإماراتي (واتساب) *" data-en="UAE Phone Number (WhatsApp) *">رقم الهاتف الإماراتي (واتساب) *</label>
+                        <div class="phone-input-wrapper">
+                            <span class="phone-prefix">+971</span>
+                            <input type="tel" id="clientPhone" class="form-control" required placeholder="50 123 4567" pattern="[0-9\s\-]{7,12}">
+                        </div>
+                    </div>
+
+                    <!-- اختيار المركب / الباقة -->
+                    <div class="form-group full-width">
+                        <label for="vesselType" data-ar="اختر المركب أو التجربة *" data-en="Select Vessel or Experience *">اختر المركب أو التجربة *</label>
+                        <select id="vesselType" class="form-control" onchange="calculateEstimate()" required>
+                            <option value="مركب خشبي (29 درهم للبالغ)" data-price="29" data-ar="مركب خشبي تراثي — 29 درهم للبالغ" data-en="Traditional Wooden Dhow — 29 AED / Adult">مركب خشبي تراثي — 29 درهم للبالغ</option>
+                            <option value="مركب خشبي متطور (45 درهم للشخص)" data-price="45" data-ar="مركب خشبي متطور — 45 درهم للشخص" data-en="Upgraded Wooden Dhow — 45 AED / Person">مركب خشبي متطور — 45 درهم للشخص</option>
+                            <option value="يخت كتمران VIP (75 درهم للشخص)" data-price="75" data-ar="يخت كتمران VIP — 75 درهم للشخص" data-en="VIP Catamaran Yacht — 75 AED / Person">يخت كتمران VIP — 75 درهم للشخص</option>
+                            <option value="يخت خاص" data-price="0" data-ar="يخت خاص VIP (حسب الحجم والمدة)" data-en="Private VIP Yacht (Custom Charter)">يخت خاص VIP (حسب الحجم والمدة)</option>
+                            <option value="سفاري دبي" data-price="0" data-ar="سفاري دبي الصحراوي" data-en="Dubai Desert Safari">سفاري دبي الصحراوي</option>
+                            <option value="سفاري أبوظبي" data-price="0" data-ar="سفاري أبوظبي الصحراوي" data-en="Abu Dhabi Desert Safari">سفاري أبوظبي الصحراوي</option>
+                        </select>
+                    </div>
+
+                    <!-- التوقيت -->
+                    <div class="form-group full-width">
+                        <label for="timeSlot" data-ar="اختر التوقيت المناسب *" data-en="Select Preferred Timing *">اختر التوقيت المناسب *</label>
+                        <select id="timeSlot" class="form-control" required>
+                            <option value="من 5:00 مساءً إلى 7:00 مساءً" data-ar="من 5:00 مساءً إلى 7:00 مساءً (رحلة الغروب)" data-en="5:00 PM to 7:00 PM (Sunset Cruise)">من 5:00 مساءً إلى 7:00 مساءً (رحلة الغروب)</option>
+                            <option value="من 7:00 مساءً إلى 9:00 مساءً" data-ar="من 7:00 مساءً إلى 9:00 مساءً (الرحلة المسائية)" data-en="7:00 PM to 9:00 PM (Evening Cruise)">من 7:00 مساءً إلى 9:00 مساءً (الرحلة المسائية)</option>
+                            <option value="من 9:00 مساءً إلى 11:00 مساءً" data-ar="من 9:00 مساءً إلى 11:00 مساءً (الرحلة الليلية)" data-en="9:00 PM to 11:00 PM (Night Cruise)">من 9:00 مساءً إلى 11:00 مساءً (الرحلة الليلية)</option>
+                        </select>
+                    </div>
+
+                    <!-- عدد الكبار -->
+                    <div class="form-group">
+                        <label for="adultsCount" data-ar="عدد الأشخاص الكبار *" data-en="Number of Adults *">عدد الأشخاص الكبار *</label>
+                        <input type="number" id="adultsCount" class="form-control" min="1" max="500" value="2" oninput="calculateEstimate()" required>
+                    </div>
+
+                    <!-- عدد الأطفال -->
+                    <div class="form-group">
+                        <label for="childrenCount" data-ar="عدد الأطفال (أقل من 10 سنوات)" data-en="Children (Under 10 Years)">عدد الأطفال (أقل من 10 سنوات)</label>
+                        <input type="number" id="childrenCount" class="form-control" min="0" max="200" value="0" oninput="calculateEstimate()">
+                    </div>
+                </div>
+
+                <!-- ملخص التكلفة التقديرية -->
+                <div class="price-summary-box">
+                    <span data-ar="التكلفة التقديرية للبالغين:" data-en="Estimated Adults Total:">التكلفة التقديرية للبالغين:</span>
+                    <strong id="estimatedTotal">58 درهم</strong>
+                </div>
+
+                <button type="submit" class="submit-whatsapp-btn">
+                    <i class="fa-brands fa-whatsapp" style="font-size: 1.35rem;"></i>
+                    <span data-ar="إرسال طلب الحجز عبر الواتساب الآن" data-en="Send Booking Request via WhatsApp">إرسال طلب الحجز عبر الواتساب الآن</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- INFO MODAL POPUP DIALOG -->
+    <div class="modal" id="infoModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h4 style="color:var(--gold-accent); margin-bottom:15px; font-size:1.45rem;" data-ar="تفاصيل الخيار والمعلومات الشاملة" data-en="Option Details & Comprehensive Info">تفاصيل الخيار والمعلومات الشاملة</h4>
+            <div id="modalText" style="line-height:1.9; white-space: pre-wrap; font-size:1.02rem; color:#FFFFFF;"></div>
+            <button class="btn-instant-book" style="margin-top:24px; width:100%; justify-content:center;" onclick="closeModal(); openBookingModal();">
+                <i class="fa-solid fa-calendar-check"></i> <span data-ar="انتقل لتعبئة بيانات الحجز" data-en="Proceed to Booking Form">انتقل لتعبئة بيانات الحجز</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p class="footer-rights">ARABIAN VOYAGE All Rights Reserved &copy; 2026 for ARABIAN VOYAGE</p>
+        <p>(Nautical Universal Routes)</p>
+        <p>Established in 2022 in Abu Dhabi | Managed by Mr. Nour & Founded by Miss Lada</p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        let currentLang = 'ar';
+        let currentActiveElem = null;
+
+        const COMPANY_WHATSAPP = "971569712753691";
+
+        function toggleMobileDrawer() {
+            const drawer = document.getElementById('mobileDrawer');
+            const icon = document.getElementById('drawerIcon');
+            drawer.classList.toggle('active');
+            icon.className = drawer.classList.contains('active') ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+        }
+
+        function closeMobileDrawer() {
+            const drawer = document.getElementById('mobileDrawer');
+            const icon = document.getElementById('drawerIcon');
+            drawer.classList.remove('active');
+            icon.className = 'fa-solid fa-bars';
+        }
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'ar' ? 'en' : 'ar';
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+
+            document.getElementById('lang-label').innerText = currentLang === 'ar' ? 'English' : 'العربية';
+
+            const elements = document.querySelectorAll('[data-ar]');
+            elements.forEach(el => {
+                if (el.tagName === 'OPTION') {
+                    el.innerText = currentLang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-ar');
+                } else {
+                    el.innerHTML = currentLang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-ar');
+                }
+            });
+
+            calculateEstimate();
+
+            if (currentActiveElem && document.getElementById('infoModal').style.display === 'flex') {
+                const text = currentLang === 'en' 
+                    ? currentActiveElem.getAttribute('data-modal-en') 
+                    : currentActiveElem.getAttribute('data-modal-ar');
+                document.getElementById('modalText').innerText = text;
+            }
+        }
+
+        function openBookingModal(selectedPackage = null) {
+            closeMobileDrawer();
+            const modal = document.getElementById('bookingModal');
+            const select = document.getElementById('vesselType');
+            
+            if (selectedPackage) {
+                for (let i = 0; i < select.options.length; i++) {
+                    if (select.options[i].value === selectedPackage) {
+                        select.selectedIndex = i;
+                        break;
+                    }
+                }
+            }
+            calculateEstimate();
+            modal.style.display = 'flex';
+        }
+
+        function closeBookingModal() {
+            document.getElementById('bookingModal').style.display = 'none';
+        }
+
+        function calculateEstimate() {
+            const select = document.getElementById('vesselType');
+            const selectedOption = select.options[select.selectedIndex];
+            const unitPrice = parseFloat(selectedOption.getAttribute('data-price')) || 0;
+            const adults = parseInt(document.getElementById('adultsCount').value) || 0;
+            const totalBox = document.getElementById('estimatedTotal');
+
+            if (unitPrice > 0) {
+                const total = unitPrice * adults;
+                totalBox.innerText = currentLang === 'ar' ? `${total} درهم` : `${total} AED`;
+            } else {
+                totalBox.innerText = currentLang === 'ar' ? `يُحدد حسب الباقة` : `Custom Quote`;
+            }
+        }
+
+        function sendBookingToWhatsApp(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('clientName').value.trim();
+            const phone = document.getElementById('clientPhone').value.trim();
+            const vessel = document.getElementById('vesselType').value;
+            const timeSlot = document.getElementById('timeSlot').value;
+            const adults = document.getElementById('adultsCount').value;
+            const children = document.getElementById('childrenCount').value || 0;
+            const estimate = document.getElementById('estimatedTotal').innerText;
+
+            const message = 
+`🌟 *طلب حجز جديد - ARABIAN VOYAGE* 🌟
+━━━━━━━━━━━━━━━━━━━━
+👤 *الاسم:* ${name}
+📱 *رقم الهاتف الإماراتي:* +971 ${phone}
+🛥️ *الخيار المطلوب:* ${vessel}
+⏰ *التوقيت:* ${timeSlot}
+👨 *عدد الكبار:* ${adults}
+👶 *عدد الأطفال (أقل من 10 سنوات):* ${children}
+💰 *التكلفة التقديرية:* ${estimate}
+━━━━━━━━━━━━━━━━━━━━
+يرجى تأكيد الحجز والتوافر. شكراً لكم!`;
+
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/${COMPANY_WHATSAPP}?text=${encodedMessage}`;
+
+            window.open(whatsappUrl, '_blank');
+            closeBookingModal();
+        }
+
+        function openModalFromElem(elem) {
+            currentActiveElem = elem;
+            const text = currentLang === 'en' 
+                ? elem.getAttribute('data-modal-en') 
+                : elem.getAttribute('data-modal-ar');
+            
+            document.getElementById('modalText').innerText = text;
+            document.getElementById('infoModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('infoModal').style.display = 'none';
+            currentActiveElem = null;
+        }
+
+        window.onclick = function(event) {
+            const infoModal = document.getElementById('infoModal');
+            const bookingModal = document.getElementById('bookingModal');
+            if (event.target === infoModal) closeModal();
+            if (event.target === bookingModal) closeBookingModal();
+        }
+    </script>
+</body>
+</html>
