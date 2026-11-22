@@ -11,17 +11,17 @@
 
     <style>
         :root {
-            --bg-dark: #0F0804;
-            --primary-navy: #1A0E07;
-            --secondary-navy: #26140A;
-            --accent-orange: #FF6B00;
-            --orange-gradient: linear-gradient(135deg, #FFA200 0%, #FF5500 100%);
+            --bg-dark: #061214;
+            --primary-navy: #0A1D20;
+            --secondary-navy: #0F292D;
+            --accent-turquoise: #00C4B4;
+            --turquoise-gradient: linear-gradient(135deg, #1CE8D6 0%, #009E91 100%);
             --gold-accent: #F4C95D;
             --gold-gradient: linear-gradient(135deg, #FFE28A 0%, #D49B27 100%);
             --text-light: #FFFFFF;
-            --text-muted: #F3E5D8;
-            --card-bg: rgba(38, 20, 10, 0.78);
-            --border-glow: rgba(244, 201, 93, 0.28);
+            --text-muted: #D8F3F0;
+            --card-bg: rgba(15, 41, 45, 0.78);
+            --border-glow: rgba(0, 196, 180, 0.32);
             --whatsapp-green: #25D366;
         }
 
@@ -44,11 +44,11 @@
         /* CUSTOM SCROLLBAR */
         ::-webkit-scrollbar { width: 7px; }
         ::-webkit-scrollbar-track { background: var(--bg-dark); }
-        ::-webkit-scrollbar-thumb { background: var(--orange-gradient); border-radius: 10px; }
+        ::-webkit-scrollbar-thumb { background: var(--turquoise-gradient); border-radius: 10px; }
 
         /* HEADER & NAVBAR */
         header {
-            background: rgba(15, 8, 4, 0.94);
+            background: rgba(6, 18, 20, 0.94);
             backdrop-filter: blur(18px);
             -webkit-backdrop-filter: blur(18px);
             padding: 0.9rem 5%;
@@ -73,12 +73,12 @@
             width: 42px;
             height: 42px;
             border-radius: 12px;
-            background: var(--orange-gradient);
+            background: var(--turquoise-gradient);
             display: flex;
             align-items: center;
             justify-content: center;
             border: 1px solid var(--gold-accent);
-            box-shadow: 0 4px 15px rgba(255, 107, 0, 0.4);
+            box-shadow: 0 4px 15px rgba(0, 196, 180, 0.4);
             flex-shrink: 0;
         }
 
@@ -127,12 +127,12 @@
             height: 2px;
             bottom: -5px;
             right: 0;
-            background: var(--orange-gradient);
+            background: var(--turquoise-gradient);
             transition: 0.3s;
         }
 
         html[dir="ltr"] .nav-links a::after { right: auto; left: 0; }
-        .nav-links a:hover { color: var(--gold-accent); }
+        .nav-links a:hover { color: var(--accent-turquoise); }
         .nav-links a:hover::after { width: 100%; }
 
         .header-actions {
@@ -142,7 +142,7 @@
         }
 
         .nav-book-btn {
-            background: var(--orange-gradient);
+            background: var(--turquoise-gradient);
             color: var(--text-light);
             border: 1px solid var(--gold-accent);
             padding: 8px 18px;
@@ -151,7 +151,7 @@
             font-size: 0.88rem;
             cursor: pointer;
             transition: 0.3s;
-            box-shadow: 0 4px 15px rgba(255, 107, 0, 0.35);
+            box-shadow: 0 4px 15px rgba(0, 196, 180, 0.35);
             display: flex;
             align-items: center;
             gap: 7px;
@@ -183,7 +183,7 @@
             display: none;
             background: rgba(255, 255, 255, 0.07);
             border: 1px solid var(--border-glow);
-            color: var(--gold-accent);
+            color: var(--accent-turquoise);
             width: 40px;
             height: 40px;
             border-radius: 10px;
@@ -200,9 +200,9 @@
             top: 68px;
             left: 0;
             width: 100%;
-            background: rgba(20, 11, 6, 0.98);
+            background: rgba(8, 24, 27, 0.98);
             backdrop-filter: blur(20px);
-            border-bottom: 2px solid var(--gold-accent);
+            border-bottom: 2px solid var(--accent-turquoise);
             z-index: 999;
             padding: 20px 6%;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
@@ -237,14 +237,14 @@
         }
 
         .mobile-drawer ul li a:hover {
-            background: rgba(255, 107, 0, 0.16);
-            color: var(--gold-accent);
+            background: rgba(0, 196, 180, 0.16);
+            color: var(--accent-turquoise);
         }
 
         /* HERO SECTION */
         .hero {
             min-height: 92vh;
-            background: linear-gradient(180deg, rgba(15, 8, 4, 0.52) 0%, rgba(15, 8, 4, 0.92) 85%, var(--bg-dark) 100%), 
+            background: linear-gradient(180deg, rgba(6, 18, 20, 0.52) 0%, rgba(6, 18, 20, 0.92) 85%, var(--bg-dark) 100%), 
                         url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
             display: flex;
             flex-direction: column;
@@ -255,10 +255,10 @@
         }
 
         .hero-badge {
-            background: rgba(244, 201, 93, 0.14);
+            background: rgba(0, 196, 180, 0.14);
             backdrop-filter: blur(8px);
-            border: 1px solid var(--gold-accent);
-            color: var(--gold-accent);
+            border: 1px solid var(--accent-turquoise);
+            color: #7EF9EE;
             padding: 7px 22px;
             border-radius: 30px;
             font-size: 0.9rem;
@@ -276,7 +276,7 @@
         }
 
         .hero h2 span {
-            background: var(--orange-gradient);
+            background: var(--turquoise-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -299,7 +299,7 @@
         }
 
         .btn-instant-book {
-            background: var(--orange-gradient);
+            background: var(--turquoise-gradient);
             color: var(--text-light);
             padding: 16px 34px;
             border-radius: 40px;
@@ -311,13 +311,13 @@
             justify-content: center;
             align-items: center;
             gap: 10px;
-            box-shadow: 0 12px 28px rgba(255, 107, 0, 0.42);
+            box-shadow: 0 12px 28px rgba(0, 196, 180, 0.42);
             transition: 0.3s transform, 0.3s box-shadow;
         }
 
         .btn-instant-book:hover {
             transform: translateY(-3px);
-            box-shadow: 0 16px 34px rgba(255, 107, 0, 0.6);
+            box-shadow: 0 16px 34px rgba(0, 196, 180, 0.6);
         }
 
         .btn-whatsapp-main {
@@ -352,7 +352,7 @@
 
         .stat-item h4 {
             font-size: 2.5rem;
-            background: var(--gold-gradient);
+            background: var(--turquoise-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: 900;
@@ -381,7 +381,7 @@
         }
 
         .section-header h3 span {
-            background: var(--orange-gradient);
+            background: var(--turquoise-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -415,8 +415,8 @@
 
         .fleet-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 18px 36px rgba(255, 107, 0, 0.2);
-            border-color: var(--gold-accent);
+            box-shadow: 0 18px 36px rgba(0, 196, 180, 0.22);
+            border-color: var(--accent-turquoise);
         }
 
         .fleet-img-wrapper {
@@ -438,7 +438,7 @@
             position: absolute;
             top: 14px;
             right: 14px;
-            background: var(--orange-gradient);
+            background: var(--turquoise-gradient);
             color: var(--text-light);
             border: 1px solid var(--gold-accent);
             padding: 6px 15px;
@@ -478,7 +478,7 @@
 
         .btn-card-book {
             flex: 2.2;
-            background: var(--orange-gradient);
+            background: var(--turquoise-gradient);
             border: 1px solid var(--gold-accent);
             color: var(--text-light);
             padding: 13px;
@@ -496,8 +496,8 @@
         .btn-card-info {
             flex: 1;
             background: rgba(255, 255, 255, 0.06);
-            border: 1px solid var(--gold-accent);
-            color: var(--gold-accent);
+            border: 1px solid var(--accent-turquoise);
+            color: var(--accent-turquoise);
             padding: 13px;
             border-radius: 13px;
             font-weight: 700;
@@ -509,18 +509,18 @@
         }
 
         .btn-card-info:hover {
-            background: var(--gold-accent);
+            background: var(--accent-turquoise);
             color: var(--bg-dark);
         }
 
         /* VIP REWARDS PROMO BANNER */
         .vip-banner {
-            background: linear-gradient(135deg, rgba(255, 136, 0, 0.14) 0%, rgba(244, 201, 93, 0.08) 50%, rgba(26, 14, 7, 0.96) 100%);
-            border: 2px solid var(--gold-accent);
+            background: linear-gradient(135deg, rgba(0, 196, 180, 0.16) 0%, rgba(244, 201, 93, 0.08) 50%, rgba(10, 29, 32, 0.96) 100%);
+            border: 2px solid var(--accent-turquoise);
             border-radius: 24px;
             padding: 42px 28px;
             text-align: center;
-            box-shadow: 0 0 35px rgba(255, 107, 0, 0.18);
+            box-shadow: 0 0 35px rgba(0, 196, 180, 0.2);
         }
 
         .vip-banner h4 {
@@ -545,7 +545,7 @@
 
         .reward-card {
             background: var(--card-bg);
-            border: 1px solid rgba(244, 201, 93, 0.3);
+            border: 1px solid rgba(0, 196, 180, 0.35);
             border-radius: 16px;
             padding: 22px;
             text-align: right;
@@ -556,14 +556,14 @@
         html[dir="ltr"] .reward-card { text-align: left; }
 
         .reward-card:hover {
-            border-color: var(--gold-accent);
+            border-color: var(--accent-turquoise);
             transform: translateY(-4px);
-            background: linear-gradient(135deg, rgba(255, 162, 0, 0.2) 0%, rgba(255, 85, 0, 0.12) 100%);
+            background: linear-gradient(135deg, rgba(28, 232, 214, 0.2) 0%, rgba(0, 158, 145, 0.14) 100%);
         }
 
         .reward-card i {
             font-size: 1.85rem;
-            color: var(--gold-accent);
+            color: var(--accent-turquoise);
             margin-bottom: 12px;
         }
 
@@ -589,7 +589,7 @@
 
         .about-text h4 {
             font-size: 2rem;
-            color: var(--gold-accent);
+            color: var(--accent-turquoise);
             margin-bottom: 18px;
             font-weight: 800;
         }
@@ -603,7 +603,7 @@
         .about-image {
             border-radius: 22px;
             overflow: hidden;
-            border: 2px solid var(--gold-accent);
+            border: 2px solid var(--accent-turquoise);
             box-shadow: 0 15px 35px rgba(0,0,0,0.5);
         }
 
@@ -632,7 +632,7 @@
         html[dir="ltr"] .route-card { text-align: left; }
 
         .route-card h4 {
-            color: var(--gold-accent);
+            color: var(--accent-turquoise);
             font-size: 1.28rem;
             margin-bottom: 16px;
         }
@@ -655,7 +655,7 @@
             content: "⚓";
             position: absolute;
             right: 0;
-            color: var(--gold-accent);
+            color: var(--accent-turquoise);
         }
 
         html[dir="ltr"] .route-card ul li::before { right: auto; left: 0; }
@@ -666,13 +666,13 @@
         }
 
         .service-box:hover {
-            border-color: var(--gold-accent);
+            border-color: var(--accent-turquoise);
             transform: translateY(-5px);
         }
 
         .service-box i {
             font-size: 2.5rem;
-            color: var(--gold-accent);
+            color: var(--accent-turquoise);
             margin-bottom: 16px;
         }
 
@@ -695,7 +695,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(10, 5, 2, 0.88);
+            background: rgba(4, 14, 16, 0.88);
             backdrop-filter: blur(12px);
             z-index: 2500;
             justify-content: center;
@@ -704,8 +704,8 @@
         }
 
         .modal-content {
-            background: linear-gradient(160deg, #2B160B 0%, #170B05 100%);
-            border: 2px solid var(--gold-accent);
+            background: linear-gradient(160deg, #102D32 0%, #071619 100%);
+            border: 2px solid var(--accent-turquoise);
             border-radius: 24px;
             max-width: 620px;
             width: 100%;
@@ -731,7 +731,7 @@
         }
 
         html[dir="ltr"] .close-modal { left: auto; right: 20px; }
-        .close-modal:hover { color: var(--gold-accent); }
+        .close-modal:hover { color: var(--accent-turquoise); }
 
         .booking-header {
             text-align: center;
@@ -742,7 +742,7 @@
 
         .booking-header h3 {
             font-size: 1.65rem;
-            color: var(--gold-accent);
+            color: var(--accent-turquoise);
             font-weight: 900;
         }
 
@@ -766,14 +766,14 @@
             margin-bottom: 6px;
             font-weight: 700;
             font-size: 0.92rem;
-            color: var(--gold-accent);
+            color: var(--accent-turquoise);
         }
 
         .form-control {
             width: 100%;
             padding: 13px 15px;
             border-radius: 12px;
-            border: 1px solid rgba(244, 201, 93, 0.35);
+            border: 1px solid rgba(0, 196, 180, 0.35);
             background: rgba(255, 255, 255, 0.08);
             color: var(--text-light);
             font-size: 1rem;
@@ -782,12 +782,12 @@
         }
 
         .form-control:focus {
-            border-color: var(--accent-orange);
+            border-color: var(--accent-turquoise);
             background: rgba(255, 255, 255, 0.14);
         }
 
         .form-control option {
-            background: #1F1008;
+            background: #0C2327;
             color: #FFFFFF;
         }
 
@@ -798,15 +798,15 @@
         }
 
         .phone-prefix {
-            background: rgba(244, 201, 93, 0.2);
-            border: 1px solid rgba(244, 201, 93, 0.35);
+            background: rgba(0, 196, 180, 0.2);
+            border: 1px solid rgba(0, 196, 180, 0.35);
             border-right: none;
             padding: 0 14px;
             height: 48px;
             display: flex;
             align-items: center;
             border-radius: 12px 0 0 12px;
-            color: var(--gold-accent);
+            color: var(--accent-turquoise);
             font-weight: 800;
             font-size: 0.98rem;
         }
@@ -814,8 +814,8 @@
         .phone-input-wrapper .form-control { border-radius: 0 12px 12px 0; }
 
         .price-summary-box {
-            background: rgba(255, 107, 0, 0.16);
-            border: 1px dashed var(--gold-accent);
+            background: rgba(0, 196, 180, 0.16);
+            border: 1px dashed var(--accent-turquoise);
             border-radius: 14px;
             padding: 14px 18px;
             margin: 8px 0 18px 0;
@@ -862,17 +862,17 @@
         }
 
         footer {
-            background: #080402;
+            background: #030B0C;
             padding: 38px 20px;
             text-align: center;
             color: var(--text-muted);
             font-size: 0.9rem;
-            border-top: 1px solid rgba(244, 201, 93, 0.15);
+            border-top: 1px solid rgba(0, 196, 180, 0.2);
             line-height: 1.85;
         }
 
         .footer-rights {
-            color: var(--gold-accent);
+            color: var(--accent-turquoise);
             font-weight: 700;
             font-size: 0.98rem;
         }
@@ -882,7 +882,7 @@
             position: fixed;
             bottom: 24px;
             left: 24px;
-            background: var(--orange-gradient);
+            background: var(--turquoise-gradient);
             color: var(--text-light);
             border: 2px solid var(--gold-accent);
             padding: 14px 24px;
@@ -891,7 +891,7 @@
             font-size: 1rem;
             cursor: pointer;
             z-index: 1500;
-            box-shadow: 0 10px 30px rgba(255, 107, 0, 0.55);
+            box-shadow: 0 10px 30px rgba(0, 196, 180, 0.55);
             display: flex;
             align-items: center;
             gap: 10px;
@@ -922,9 +922,9 @@
                 bottom: 0;
                 left: 0;
                 width: 100%;
-                background: rgba(18, 9, 4, 0.96);
+                background: rgba(6, 18, 20, 0.96);
                 backdrop-filter: blur(16px);
-                border-top: 1px solid var(--gold-accent);
+                border-top: 1px solid var(--accent-turquoise);
                 padding: 10px 14px;
                 gap: 10px;
                 z-index: 1600;
@@ -933,7 +933,7 @@
 
             .mobile-bar-book {
                 flex: 1.6;
-                background: var(--orange-gradient);
+                background: var(--turquoise-gradient);
                 color: var(--text-light);
                 border: 1px solid var(--gold-accent);
                 border-radius: 13px;
@@ -1378,7 +1378,7 @@
                 <i class="fa-solid fa-calendar-check"></i>
                 <span data-ar="نموذج الحجز الفوري (إرسال للواتساب)" data-en="Instant Booking Form (Send to WhatsApp)">نموذج الحجز الفوري (إرسال للواتساب)</span>
             </button>
-            <a href="tel:0554406511" class="btn-whatsapp-main" style="background:var(--secondary-navy); border:1px solid var(--gold-accent);">
+            <a href="tel:0554406511" class="btn-whatsapp-main" style="background:var(--secondary-navy); border:1px solid var(--accent-turquoise);">
                 <i class="fa-solid fa-phone"></i> 
                 <span data-ar="الاتصال المباشر: 055 440 6511" data-en="Direct Call: 055 440 6511">الاتصال المباشر: 055 440 6511</span>
             </a>
@@ -1483,7 +1483,7 @@
     <div class="modal" id="infoModal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal()">&times;</span>
-            <h4 style="color:var(--gold-accent); margin-bottom:15px; font-size:1.45rem;" data-ar="تفاصيل الخيار والمعلومات الشاملة" data-en="Option Details & Comprehensive Info">تفاصيل الخيار والمعلومات الشاملة</h4>
+            <h4 style="color:var(--accent-turquoise); margin-bottom:15px; font-size:1.45rem;" data-ar="تفاصيل الخيار والمعلومات الشاملة" data-en="Option Details & Comprehensive Info">تفاصيل الخيار والمعلومات الشاملة</h4>
             <div id="modalText" style="line-height:1.9; white-space: pre-wrap; font-size:1.02rem; color:#FFFFFF;"></div>
             <button class="btn-instant-book" style="margin-top:24px; width:100%; justify-content:center;" onclick="closeModal(); openBookingModal();">
                 <i class="fa-solid fa-calendar-check"></i> <span data-ar="انتقل لتعبئة بيانات الحجز" data-en="Proceed to Booking Form">انتقل لتعبئة بيانات الحجز</span>
